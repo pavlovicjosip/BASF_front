@@ -9,19 +9,20 @@ If you want to run the application without the frontend part, you can use Postma
 
 # Screenshots from the application:
 
-Registration Page
+## Registration Page
+
 ![image](https://github.com/user-attachments/assets/57f863ff-3712-48b5-b21e-f30f548e37dc)
 
-Login Page
+## Login Page
 ![image](https://github.com/user-attachments/assets/088b0e23-9f04-4deb-9998-ca188edd147a)
 
-Main Window
+## Main Window
 ![image](https://github.com/user-attachments/assets/cefd1dde-df56-48ea-a603-0bd26a6557d1)
 
-Resized Main Window
+## Resized Main Window
 ![image](https://github.com/user-attachments/assets/815bc27a-694e-4da6-b117-759a58cdd5d3)
 
-Filters Modal
+## Filters Modal
 ![image](https://github.com/user-attachments/assets/5cf4834c-481c-4c04-b8c8-5e68c538a647)
 
 
