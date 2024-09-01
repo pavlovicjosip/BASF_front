@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+:root {
+  --primary-color: #004694;
+  --secondary-color: #98b5d4;
+  --background-color: #f4f4f4;
+  --text-color: #333333;
+  --error-color: #e74c3c;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+fa-icon {
+  color: $primary-color;
+}

@@ -1,0 +1,15 @@
+.filter-container {
+  padding: 10px;
+}
+.filter-section {
+  margin-bottom: 20px;
+}
+.filter-item {
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .filter-container {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}

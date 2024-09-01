@@ -1,0 +1,56 @@
+@import "../../../variables";
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  margin-top:20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.product-item {
+  border-bottom: 1px solid $secondary-color;
+}
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+.arrow {
+  transition: transform 0.3s ease;
+  align-self: flex-start;
+}
+.arrow.expanded {
+  transform: rotate(180deg);
+  align-self: flex-start;
+}
+.product-details {
+  padding: 10px;
+}
+
+.product-type {
+  color: $secondary-color;
+  font-size: small;
+}
+
+.map-icon {
+  margin-right: 5px;
+}
+
+.region-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.region-pill {
+  background-color: $secondary-color;
+  color: $background-color;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.bordered {
+  border: 1px solid $primary-color;
+}

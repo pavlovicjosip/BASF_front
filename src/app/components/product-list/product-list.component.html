@@ -1,0 +1,27 @@
+<div class="product-list">
+  <div
+    *ngFor="let product of expandableProducts"
+    class="product-item"
+    [class.bordered]="product.expanded"
+  >
+    <div class="product-header" (click)="toggleProduct(product)">
+      <div>
+        <span>{{ product.productName }}</span>
+        <p class="product-type">{{ product.productType }}</p>
+      </div>
+      <span class="arrow" [class.expanded]="product.expanded"
+        ><fa-icon [icon]="faAngleDown"></fa-icon
+      ></span>
+    </div>
+    <div *ngIf="product.expanded" class="product-details">
+      <p>
+        <span class="map-icon"><fa-icon [icon]="faMap"></fa-icon></span> Region
+      </p>
+      <div class="region-pills">
+        <span *ngFor="let region of product.regions" class="region-pill">{{
+          region
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

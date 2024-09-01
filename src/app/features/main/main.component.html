@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<div class="main-container">
+  <div class="content-panel">
+    <app-search
+      [totalProducts]="filteredProducts.length"
+      (allProductsClick)="resetFiltersAndFetchAll()"
+      (searchChange)="onSearchFilterChange($event)"
+    ></app-search>
+    <button class="filter-button" (click)="openFilterModal()">Filters</button>
+    <app-product-list [products]="filteredProducts"></app-product-list>
+  </div>
+  <div class="filter-panel" *ngIf="!isSmallScreen">
+    <app-filter
+      [regions]="regions"
+      [productTypes]="productTypes"
+      [selectedTypes]="selectedTypes"
+      [selectedRegions]="selectedRegions"
+      (typeChange)="onTypeChange($event)"
+      (regionChange)="onRegionChange($event)"
+    >
+    </app-filter>
+  </div>
+</div>
+<app-modal *ngIf="isFilterModalOpen" (closeModal)="closeFilterModal()">
+  <app-filter
+    [regions]="regions"
+    [productTypes]="productTypes"
+    [selectedTypes]="selectedTypes"
+    [selectedRegions]="selectedRegions"
+    (typeChange)="onTypeChange($event)"
+    (regionChange)="onRegionChange($event)"
+  >
+  </app-filter>
+</app-modal>

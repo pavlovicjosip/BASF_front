@@ -1,0 +1,39 @@
+@import "../../../variables";
+
+.main-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+.content-panel {
+  flex: 1;
+}
+.filter-panel {
+  width: 250px;
+}
+.filter-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .filter-panel {
+    display: none;
+  }
+  .filter-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+}

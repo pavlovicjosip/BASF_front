@@ -1,0 +1,37 @@
+<div class="filter-container">
+  <h3>Filters</h3>
+  <hr class="break" />
+  <div class="filter-content">
+    <div class="filter-section">
+      <h4>Type</h4>
+
+      <div *ngFor="let type of productTypes" class="filter-item">
+        <input
+          type="checkbox"
+          [id]="'type-' + type.id"
+          [checked]="isTypeSelected(type.name)"
+          (change)="onTypeChange(type.name, $event)"
+        />
+        <label [for]="'type-' + type.id">{{
+          type.name | removeUnderscore
+        }}</label>
+      </div>
+    </div>
+    <div class="filter-section">
+      <h4>Region</h4>
+      <hr class="break" />
+      <div *ngFor="let region of regions" class="filter-item">
+        <input
+          type="checkbox"
+          [id]="'region-' + region.id"
+          [checked]="isRegionSelected(region.name)"
+          (change)="onRegionChange(region.name, $event)"
+        />
+        <label [for]="'region-' + region.id">{{
+          region.name | removeUnderscore
+        }}</label>
+      </div>
+    </div>
+    <hr class="break" />
+  </div>
+</div>

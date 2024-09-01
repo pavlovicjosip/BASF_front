@@ -1,0 +1,18 @@
+<div class="search-container">
+  <div class="search-input-wrapper">
+    <input
+      [formControl]="searchTerm"
+      placeholder="Enter your search"
+      class="search-input"
+    />
+    <span class="microphone-icon"
+      ><fa-icon class="fa-light" [icon]="faMicrophone"></fa-icon
+    ></span>
+  </div>
+  <div class="action-row">
+    <button class="all-products-button" (click)="onAllProductsClick()">
+      All Products
+    </button>
+    <p class="total-products">Total products found: {{ totalProducts }}</p>
+  </div>
+</div>
