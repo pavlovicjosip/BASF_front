@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { ApiService } from '../../services/api.service';
 import { NavComponent } from '../../components/nav/nav.component';
 import { Product } from '../../models/Product.model';
-import { ModalComponent } from "../../components/modal/modal.component";
+import { ModalComponent } from '../../components/modal/modal.component';
 
 interface FilterItem {
   id: number;
@@ -26,10 +26,11 @@ interface FilterItem {
     NavComponent,
     FilterComponent,
     FormsModule,
-    ModalComponent
-],
+    ModalComponent,
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainComponent {
   regions: FilterItem[] = [];

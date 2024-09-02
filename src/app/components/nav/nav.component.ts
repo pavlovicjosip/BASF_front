@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavComponent {
   username: string | null = null;

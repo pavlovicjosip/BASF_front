@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,7 @@ import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
   imports: [CommonModule, FormsModule, FontAwesomeModule, ReactiveFormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchComponent implements OnInit {
   @Input() totalProducts: number = 0;

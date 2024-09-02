@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {
@@ -19,6 +19,7 @@ interface ExpandableProduct extends Product {
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent {
   faChevronUp = faChevronUp;

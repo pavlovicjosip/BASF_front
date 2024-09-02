@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -17,6 +17,7 @@ import { Router } from '@angular/router';
   providers: [AuthService],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthComponent implements OnInit {
   authForm!: FormGroup;

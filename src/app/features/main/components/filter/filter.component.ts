@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -20,6 +21,7 @@ interface FilterItem {
   imports: [CommonModule, FormsModule, RemoveUnderscorePipe],
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FilterComponent {
   @Input() regions: FilterItem[] = [];
