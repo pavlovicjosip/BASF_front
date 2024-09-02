@@ -2,7 +2,7 @@
 
 This project should be run with the corresponding backend application which is available here: https://github.com/pavlovicjosip/BASF
 
-To be able to run it first you should change the DB user information in application.properties under src/main/resources to fit your PostgreSQL user info.
+To be able to run it first you need to change the DB user information in application.properties under src/main/resources to fit your PostgreSQL user info.
 If you want to run the application without the frontend part, you can use Postman and import the Postman collection which exists in the DOCS folder as Products.postman_collection.json.
 
 
